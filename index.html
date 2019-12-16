@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>This Is a Fake Ad</title>
+</head>
+<body>
+
+<div style="margin: 0 auto; width: 300px;">Hey you, buy some <div style="display:inline-block" id="item_for_sale"></div><div>
+
+
+<script type="text/javascript">
+
+items = ['socks', 'beer', 'Christmas trees']
+index = 1
+
+document.getElementById("item_for_sale").innerHTML = items[0]
+
+window.setInterval(function() {
+
+    document.getElementById("item_for_sale").innerHTML = items[index]
+
+    if (index == items.length - 1) {
+        index = 0
+    } else {
+        index++
+    }
+
+}, 5000)
+
+</script>
+
+
+</body>
+</html>
